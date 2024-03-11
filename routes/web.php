@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('hotel', [HotelController::class, 'index'])->name('hotel');
+Route::get('/', [HotelController::class, 'index'])->name('hotel');
 
 Route::get('/reservation/{hotel_id}', 'App\Http\Controllers\HotelController@reserve')->name('reservation')->middleware(['auth', 'verified']);
 Route::post('/store/{hotel_id}', 'App\Http\Controllers\HotelController@store')->name('store');
