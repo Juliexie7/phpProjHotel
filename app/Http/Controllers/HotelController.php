@@ -14,6 +14,7 @@ class HotelController extends Controller
 {
     public function index()
     {
+        echo("<script>console.log('PHP: **************controller*********************');</script>");
         $hotels = hotel::all();
         return view('welcome', compact('hotels'));
     }

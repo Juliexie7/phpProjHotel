@@ -3,6 +3,8 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
+echo("<script>console.log('PHP: **************index.php*********************" . $data . "');</script>");
+
 define('LARAVEL_START', microtime(true));
 
 /*
