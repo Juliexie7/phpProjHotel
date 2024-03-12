@@ -12,7 +12,6 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
-    echo("<script>console.log('PHP: **************Route register*********************');</script>");
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
