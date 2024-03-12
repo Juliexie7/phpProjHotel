@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+echo("<script>console.log('PHP: **************Route*********************');</script>");
 Route::get('hotel', [HotelController::class, 'index'])->name('hotel');
 Route::get('/', [HotelController::class, 'index'])->name('hotel');
 
