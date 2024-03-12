@@ -15,23 +15,23 @@ use App\Http\Controllers\HotelController;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 
 echo("<script>console.log('PHP: **************Route*********************');</script>");
 Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
-Route::get('/', [HotelController::class, 'index'])->name('hotel');
+// Route::get('/', [HotelController::class, 'index'])->name('hotel');
 
-Route::get('/reservation/{hotel_id}', 'App\Http\Controllers\HotelController@reserve')->name('reservation')->middleware(['auth', 'verified']);
-Route::post('/store/{hotel_id}', 'App\Http\Controllers\HotelController@store')->name('store');
+// Route::get('/reservation/{hotel_id}', 'App\Http\Controllers\HotelController@reserve')->name('reservation')->middleware(['auth', 'verified']);
+// Route::post('/store/{hotel_id}', 'App\Http\Controllers\HotelController@store')->name('store');
 
-Route::get('/room/{hotel_id}/{checkin}/{checkout}', 'App\Http\Controllers\HotelController@roomavailable')->name('roomavailable');
-echo("<script>console.log('PHP: **************Route222*********************');</script>");
-require __DIR__.'/auth.php';
+// Route::get('/room/{hotel_id}/{checkin}/{checkout}', 'App\Http\Controllers\HotelController@roomavailable')->name('roomavailable');
+// echo("<script>console.log('PHP: **************Route222*********************');</script>");
+// require __DIR__.'/auth.php';
