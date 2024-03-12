@@ -26,12 +26,12 @@ Route::middleware('auth')->group(function () {
 });
 
 echo("<script>console.log('PHP: **************Route*********************');</script>");
-Route::get('hotel', [HotelController::class, 'index'])->name('hotel');
+Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
 Route::get('/', [HotelController::class, 'index'])->name('hotel');
 
 Route::get('/reservation/{hotel_id}', 'App\Http\Controllers\HotelController@reserve')->name('reservation')->middleware(['auth', 'verified']);
 Route::post('/store/{hotel_id}', 'App\Http\Controllers\HotelController@store')->name('store');
 
 Route::get('/room/{hotel_id}/{checkin}/{checkout}', 'App\Http\Controllers\HotelController@roomavailable')->name('roomavailable');
-
+echo("<script>console.log('PHP: **************Route222*********************');</script>");
 require __DIR__.'/auth.php';
