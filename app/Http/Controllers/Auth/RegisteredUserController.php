@@ -20,6 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+        echo("<script>console.log('PHP: **************controller create*********************');</script>");
         return view('auth.register');
     }
 

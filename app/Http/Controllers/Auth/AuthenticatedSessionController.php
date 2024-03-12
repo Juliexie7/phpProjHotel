@@ -17,6 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        echo("<script>console.log('PHP: **************Controller login*********************');</script>");
         return view('auth.login');
     }
 
