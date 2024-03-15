@@ -45,8 +45,8 @@
 
   <!-- Copyright -->
   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-dark" href="#">CozyHaven.com</a>
+    © 2023 Copyright: 
+    <a class="text-dark" href="https://portfolio-wj.vercel.app/">Wenjun Xie</a>
   </div>
   <!-- Copyright -->
 </footer>
